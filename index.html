@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+
+    
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+
+    <title>The Gamer's Heaven</title>
+
+
+    <link rel="icon" type="image/png" href="assets/images/Layer 1.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7cOpen+Sans:400,700" rel="stylesheet" type="text/css">
+
+    <link href="http://fonts.cdnfonts.com/css/facon" rel="stylesheet">
+
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+
+    
+    <link rel="stylesheet" href="assets/tghcss.css">
+ 
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+$(document).ready(function(){
+$("b").mouseenter(function(){
+ $(".rr").css("color","red")
+ $(".bb").css("color","#133e94")
+ $(".gg").css("color","#1c9413")
+  });
+  
+$("b").mouseleave(function(){
+ $("b").css("color","#1b0e3b")
+  }); 
+});
+
+
+var count=0;
+var click=0;
+
+$(document).ready(function(){$("#cart-btn").hide();$("#checkout-btn").hide();
+
+
+$(".botton").click(function(){$("#cart-btn").show();$("#checkout-btn").show();
+var a=document.getElementById("cart_value");
+var b=$(this).attr("id");
+++count;
+if(this.id=="b2"){
+a.innerHTML=this.value;}
+
+else{a.innerHTML=count;}
+
+});
+
+
+
+
+$("#bo2").click(function(){
+$.fn.but2();if(bo1_click==1){$("#tab1").collapse('toggle');$.fn.but1();}
+});
+
+
+
+var bo2_click=0;
+$.fn.but2=function(){
+if(bo2_click==0){$("#bo2").html("-");bo2_click++;$("#bo2").mouseenter(function(){$("#bo2").css("background-color","red");});
+$("#bo2").mouseleave(function(){$("#bo2").css("background-color","white");});}
+else{$("#bo2").html("+");bo2_click--;$("#bo2").mouseenter(function(){$("#bo2").css("background-color","#3aeb34");});
+$("#bo2").mouseleave(function(){$("#bo2").css("background-color","white");});}
+}
+
+
+
+$("#bo1").click(function(){$.fn.but1();if(bo2_click==1){$("#tab2").collapse('toggle');$.fn.but2();}
+});
+
+var bo1_click=0;
+$.fn.but1=function(){
+if(bo1_click==0){$("#bo1").html("-");bo1_click++;$("#bo1").mouseenter(function(){$("#bo1").css("background-color","red");});
+$("#bo1").mouseleave(function(){$("#bo1").css("background-color","white");});}
+else{$("#bo1").html("+");bo1_click--;$("#bo1").mouseenter(function(){$("#bo1").css("background-color","#3aeb34");});
+$("#bo1").mouseleave(function(){$("#bo1").css("background-color","white");});};
+
+}
+var i=0;
+var images=["assets/images/kbg.jpg","assets/images/f21.jpg","assets/images/ps-player-celebration-video-thumb-01-ps4-en-18feb20_1582024626383.jpg","assets/images/retro-game-neon-sign-video-games-night-light-symbol-glowing-gamer-poster_176516-268.jpg","assets/images/console.jpg"];
+function slideshow(){
+if(i<5){document.getElementById("slideshow").src=images[i];i++;}else{i=0;document.getElementById("slideshow").src=images[i];i++}}
+
+
+setInterval(slideshow, 3500);
+
+});
+
+
+var status;
+
+function validation(){
+var mail=document.getElementById("em").value;
+  var regxem=/^([a-zA-Z0-9\.]+)@([a-zA-Z0-9]+).([a-z]{2,5}).([a-z]{2,5})$/ ;
+  if(regxem.test(mail))
+  {status=1;}
+  else{status=0;
+    alert("Enter Valid Email ");
+	}
+	
+	$("#mai").click(function(e){if(status==1){
+  $('#myModal').modal('show');
+  e.preventDefault();
+  }
+  else{return false;}
+});
+
+}
+
+
+
+</script>
+    
+<style>
+#cart_value{
+  font-family: facon;
+  font-size:20px;
+}
+
+
+
+.btn{height:60px;}
+
+
+
+
+#checkout-btn{
+  font-family: Avengero Disassembled;
+  font-size:20px;
+}
+
+#d3 {font-family: American Kestrel Laser;
+  font-size:37px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+
+#group{
+  font-family: facon;
+  font-size:30px;
+}
+
+.align-right{text-align:right;border:0;}
+	 
+.tab{
+height:130px;
+width:185px;
+border: 2px solid red;
+background-color:black;
+}
+
+.tab2{
+height:100px;
+width:190px;
+border: 2px solid red;
+background-color:black;
+}
+
+.pp{display: inline;}
+.pp2{display: inline;
+padding: 0px 30px;}
+
+ul{list-style-type:;}
+
+li{padding:0;}
+
+#a1:hover{color:#cc66ff;}
+
+#bo1:hover{background-color:#3aeb34;}
+#bo2:hover{background-color:#3aeb34;}
+
+
+#pc-img{border: 1px solid black;}
+
+
+label{color:white;}
+
+
+.cu{height:330px;}
+
+.links{color:white;
+font-size:20px;}
+
+.links:hover{color:red;}
+
+#help{color:white;font-size:15px;}
+
+
+.links2{font-size:20px;}
+
+
+.links2:hover{color:red;}
+</style>	
+</head>
+
+
+
+<body>
+    
+        
+
+<header >
+
+    
+
+    <nav class="tgh-navbar ">
+        <div class="container">
+            <div class="tgh-nav-table">
+                
+                <a href="index.html" class="tgh-nav-logo" title="The Gamer's Heaven">
+                    <img src="assets/images/logimgl.png" alt="TGH-The Gamer's Heaven" width="250">
+                </a>
+                
+                <ul class="tgh-nav align-right  d-lg-table-cell" >
+                    
+        <li >
+           <div class="pp"> <a class="a1" href="store.html">
+                Game Store </a> <button id="bo1" href="#tab1" data-toggle="collapse" style="border-radius:3rem;">+</button></div>
+				
+                
+        
+			
+			<div id="tab1" class="tab collapse">
+			<ul >
+                        
+        <li>
+            <a href="store.html#xbox" >
+                Xbox Games
+                
+            </a>
+        </li>
+        <li >
+            <a href="store.html#ps" >
+                PS Games</a>
+          </li>
+<li>		  
+            
+            <a href="store.html#pc">
+                PC Games
+                
+            </a>
+        </li>
+        <li>
+            <a href="store.html#nin">
+                Nintendo
+                
+            </a>
+        </li>
+        
+                    </ul></div>
+        </li>
+		
+		
+        <li >
+            <div class="pp2">
+			<a href="hardware.html" class="a1">
+                Hardware
+                
+            </a><button id="bo2" href="#tab2" data-toggle="collapse" style="border-radius:3rem;">+</button></div>
+			
+			<div id="tab2" class="tab2 collapse">
+			<ul  >
+                        
+        <li>
+            <a href="hardware.html#a1">
+                Consoles
+                
+            </a>
+        </li>
+		<li>
+            <a href="hardware.html#a2">
+                PC Gaming
+                
+            </a>
+        </li>
+        <li >
+            <a href="hardware.html#a3">
+                Accessories
+                
+            </a>
+                   
+        </li>
+       
+                    </ul></div>
+        
+        
+        <li >
+            <a href="news.html">
+                News
+                
+            </a>
+        </li>
+        <li >
+            <a href="#cu">
+                Support +
+                
+            </a>
+        </li>
+		</ul>
+                
+                    
+                    
+                
+            </div>
+        </div>
+    </nav>
+                
+
+</header>
+
+    
+    
+ 
+
+  <br>  
+
+    <div >
+        
+           <div class="gap"></div>
+		   
+        
+
+        
+<div class="container">
+
+    <!-- START: Image SlideShow -->
+    <div class="container-fluid" >
+	<div class="row" ><div class="col-8" >
+        <img  src="assets/images/console.jpg" id="slideshow" width="101.8%" height="400px" ></div>
+    
+	<div  class="col-4 grpbg noselect"  ><div id="d3"><br>Group 10<div id="group"><br>Sejal(C)<br>Samriddhi <br>Samriddhi <br>Saurabh</div></div>
+        
+    </div></div>
+	</div>
+	<br>
+    <!-- END: Image Slideshow -->
+
+    
+	<div class="gap"></div>
+	 <!-- START: Games -->
+    <div class="gap"></div>
+    <h2 >___<span><span class="text-main-1"> Game </span>Store  </span>&nbsp;<span>__________________________________________________</span></h2>
+    
+    <br>
+
+
+    
+    <div >
+        <div class="row">
+            
+            
+            <div class="col-3">
+                
+                <div >
+                    <a href="store.html#xbox" class="homimg">
+                        <img src="assets/images/newxbi.jpg" alt="Xbox Game Image" >
+                        
+                    </a>
+                    <div class="gap"></div>
+                    <h4 class="title-xb"><a href="store.html#xbox">Xbox Games</a></h4>
+                  
+                    <a href="store.html#xbox"><button  value="Game Purchased" class="btn1 xb-btn ">View Games</button></a>
+                   
+                </div>
+                
+            </div>
+            
+            
+            <div class="col-3">
+                <!-- START:-->
+                <div >
+                    <a href="store.html#pc" class="homimg" >
+                        <img src="assets/images/pclogo3.jpg" alt="PC Games" >
+                    </a>
+                   <div class="gap"></div>
+                    <h4 class="title-pc"><a href="store.html#pc">PC Games</a></h4>
+                    
+                    <a href="store.html#pc"><button class="btn1 common-btn">View Games</button></a>
+                   
+                </div>
+                <!-- END: -->
+            </div>
+            
+            
+            <div class="col-3">
+                <!-- START: -->
+                <div >
+                    <a href="store.html#nin" class="homimg">
+                        <img src="assets/images/nin.jpg" alt="Nintendo">
+                        
+                        
+                        
+                    </a>
+                    <div class="gap"></div>
+                    <h4 class="nintendo-title"><a href="store.html#nin">Nintendo Games</a></h4>
+                    
+                    <a href="store.html#nin"><button class="btn1 nintendo-btn">View Games</button></a>
+                    
+                </div>
+                <!-- END: -->
+            </div>
+            
+            
+            <div class="col-3">
+                <!-- START: -->
+                <div >
+                    <a href="store.html#ps" class="homimg">
+                        <img src="assets/images/pslogo2.jpg" alt="Sony Ps">
+                       
+                        
+                    </a>
+                    <div class="gap"></div>
+                    <h4 class="sonyps-title"><a href="store.html#ps">PS Games</a></h4>
+                   
+                    <a href="store.html#ps"><button class="btn1 ps-btn ">View Games</button></a>
+               
+                </div>
+                <!-- END:  -->
+            </div>
+            
+        </div>
+    </div>
+    <!-- END: Games -->
+<br>
+<div class="gap2"></div>
+	
+	
+	
+	
+	 <!-- START: Hardware -->
+            <h2 >___<span class="text-main-1"> Hardware&nbsp;</span><span>____________________________________________________</span></h2>
+            <div class="gap"></div>
+            
+                <div class="row ">
+                    
+                    
+                    <div class="col-4">
+                        <!-- START:  -->
+                        
+                            <a href="blog-article.html" class="homimg">
+                                <img src="assets/images/console.jpg" alt="Consoles">
+                               
+                            </a>
+                            <div class="gap"></div>
+                            <h4 id="tc" class="tricolor "><a href="hardware.html#a1"><b class="rr">Con</b><b class="bb">so</b><b class="gg">les</b></a></h4>
+                            
+                      
+                             <a href="hardware.html#a1"> <button id="b2" class="btn1 common-btn" value="PC Gaming">View All</button></a>
+                        
+					</div>
+                        <!-- END: -->
+                    
+                    
+                    
+                    <div class="col-4">
+                        <!-- START: -->
+                        
+                            <a href="hardware.html#a2" class="homimg">
+                                <img src="assets/images/gm2.jpg" alt="Gaming Monitor">
+                                
+                            </a>
+                            <div class="gap"></div>
+                            <h4 class="title-pc"><a href="hardware.html#a2" >PC Gaming</a></h4>
+                            
+                           <a href="hardware.html#a2"> <button id="b2" class="btn1 common-btn" value="PC Gaming">View All</button></a>
+                        </div>
+                        <!-- END: -->
+						
+						
+						
+                    
+                    
+					<div class="col-4">
+                        <!-- START: -->
+                        
+                            <a href="hardware.html#a3" class="homimg">
+                                <img src="assets/images/ga4.jpg" alt="GA">
+                               
+                            </a>
+                            <div class="gap"></div>
+                            <h4 class="title-pc"><a href="hardware.html#a3">Gaming Accessories</a></h4>
+                            <a href="hardware.html#a3"> <button id="b2" class="btn1 common-btn" value="PC Gaming">View All</button></a>
+                    </div>
+                        <!-- END:  -->
+                    </div>
+                
+            </div>
+			
+            
+	
+	
+	
+	
+	
+	
+	
+        
+            <!-- START: Footer -->
+			<br>
+
+
+<div class="cu flex-view">
+        
+        <div class="row container " id="cu">
+            <div class="col-6 ">
+                
+                    <h3 class="nav-link">Support ++</h3>
+                    
+                       <form action="#cu" onsubmit="validation()" >
+
+<div class='form-group'>
+    <label ><h5 >E-mail</h5></label>
+    <input type="email" id="em" class='form-control' placeholder="We will contact back through this E-mail" >
+
+</div>
+
+<div class='form-group'>
+    <label ><h5>Message</h5></label>
+    <textarea class='form-control' required></textarea><br>
+	<button type="submit" id="mai" class="btn-tgh btn-info btn-lg" >Submit</button> </form>
+
+</div>
+<div class="modal-container">  
+  
+    <!-- Trigger the modal with a button -->  
+     
+    
+    <!-- Modal -->  
+    <div class="modal " id="myModal" >  
+      <div class="modal-dialog">  
+          
+        
+        <!-- Modal content-->  
+        <div class="modal-content">  
+          <div class="modal-header">  
+            <h4 class="modal-title">Message Received</h4>  
+          </div>  
+          <div class="modal-body">  
+            <p>Someone Will Be In Contact Shortly. 
+                Thank You For Interacting With Us</p>  
+          </div>  
+          <div class="modal-footer">  
+            <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Close</button>  
+          </div>  
+        </div>  
+          
+      </div>  
+    </div>  
+
+
+                        
+                    
+                
+            </div>
+            
+                            
+                      
+               
+            </div>
+			
+			
+			<div class="col-1"></div>
+			
+			<div class="col-5"><h3 class="nav-link">Contact Us</h3><br>
+			<div class="row">
+			<div class="col-7">
+			<a href="#" class="links">www.tgh.co.in/help</a><br><br>
+			
+			<a href="#" class="links">discord.com/TGH</a><br><br>
+			
+			<a href="#" class="links">twitter.com/TGH</a><br><br>
+			
+				<div ><a id="help" >Need more help ?</a>&nbsp;<a href="support.html"><button type="button" class="btn-tgh btn-danger btn-sm" style="width:auto">Click here</button></a>
+			</div>
+			
+			</div>
+			
+			
+			<div class="col-5">
+			
+			<a href="#" class="links">reddit.com/TGH</a><br><br>
+			
+			<a href="#" class="links2">youtube.com/TGH</a><br><br>
+			
+			</div>
+			
+			
+			</div>
+			</div>
+			
+			
+			
+			
+			
+			
+			
+			</div>
+        
+        
+    </div>
+ 
+
+
+
+
+
+
+ 
+<footer >
+
+    <div class="india">
+        
+            <h5>
+                <a target="_blank" href="index.html" >AWD Project Made BY GROUP 10</a>
+            </h5>
+            
+    </div>
+</footer>
+
+
+        
+    </div>
+
+ 
+
+
+
+    
+
+    
+  
+    
+
+
+
+    
+
+    
+<!-- START: Scripts -->
+
+
+<!-- Bootstrap -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+
+    
+</body>
+</html>

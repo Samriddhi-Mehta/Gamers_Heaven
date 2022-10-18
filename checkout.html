@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+
+    
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>TGH | Checkout</title>
+
+
+ <link rel="icon" type="image/png" href="assets/images/Layer 1.png">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- START: Styles -->
+
+    <link href="http://fonts.cdnfonts.com/css/facon" rel="stylesheet">
+                
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7cOpen+Sans:400,700" rel="stylesheet" type="text/css">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="assets/tghcss.css">
+
+
+
+
+<style>
+body {
+  font-size: 17px;
+  background-image:linear-gradient(purple,red,purple);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+
+#t1{width:100%;}
+
+
+
+input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding: 12px;
+  border: 1px solid black;
+  border-radius: 3px;
+}
+
+label {
+  margin-bottom: 10px;
+  
+}
+
+
+
+.btn {
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  width: 100%;
+  border-radius: 3px;
+}
+
+
+
+hr {
+  border: 1px solid black;
+}
+
+
+
+.checkbox-lg .custom-control-label::before, 
+.checkbox-lg .custom-control-label::after {
+  top: .8rem;
+  width: 1.55rem;
+  height: 1.55rem;
+}
+
+.checkbox-lg .custom-control-label {
+  padding-top: 13px;
+  padding-left: 6px;
+}
+
+
+#cbbd{background-color:black;color:white;width:430px;height:20px;}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column-reverse;
+  }
+  
+}
+
+
+
+.button{
+     width:100%;
+	 }
+
+.games{font-size:20px;
+font-weight:400;}
+
+</style>
+    
+    <!-- END: Styles -->
+
+    <!-- jQuery -->
+    <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+    
+	<script src="assets/tg.js"></script>
+	
+
+
+
+
+	
+<script>
+
+var status=0;
+
+function validation(){
+var no = document.getElementById("phone").value;
+var mail=document.getElementById("email").value;
+var nam=document.getElementById("fname").value;
+  var regx = /^[6-9]\d{9}$/ ;
+  var regxem=/^([a-zA-Z0-9\.]+)@([a-zA-Z0-9]+).([a-z]{2,5}).([a-z]{2,5})$/ ;
+  if(regx.test(no) && regxem.test(mail) && nam.trim()!="" )
+  {status=1;}
+  else{status=0;
+    alert("Enter Valid Email or Phone Number");
+	}
+
+}
+
+
+function alt(){
+
+alert("Your order has been placed successfully, HAPPY GAMING");
+}
+
+
+
+$(document).ready(function(){$("#cbbd").hide();
+
+
+var i;
+for(i=0;i<sessionStorage.number;i++){
+//$("#gn").html(sessionStorage.game);
+//$("#rate").html(sessionStorage.price);
+var b=i+1;
+var game=sessionStorage.getItem("game"+b);
+var price=sessionStorage.getItem("price"+b);
+ var markup = "<tr><td class='games'>"+ b +".</td><td class='games'>" + game + "</td><td class='games'>" +"Rs "+ price + "</td></tr>";
+                 $("#t1").append(markup);
+				 $("#total").html("Rs " + sessionStorage.total);
+
+}
+
+$("#cbb").click(function(){
+$("#cbbd").show();
+});
+
+$(".button").click(function(){
+$("#abcd").hide();
+});
+
+//$("#op").click(function(){
+
+//alert("Your order has been placed successfully, HAPPY GAMING");
+//});
+
+
+$('#main').on('submit', function(e){if(status==1){
+  $('#abcd').modal('show');
+  e.preventDefault();
+  return true;
+  }
+  
+  else{return false;}
+ 
+});
+
+
+$('#backbtn').click(function(e){
+  $('#abcd').modal('show');
+  e.preventDefault();
+});
+
+
+
+});
+
+
+	function preventBack(){window.history.forward();}
+	
+	setTimeout("preventBack()",0);
+	window.onunload = function(){null};
+	
+
+
+
+</script>
+
+	
+	
+	
+	
+    
+</head>
+
+
+<body>
+    
+        
+<header>
+
+    <nav class="tgh-navbar ">
+        <div class="container" >
+            <div class="tgh-nav-table">
+                
+                <a href="index.html" class="tgh-nav-logo">
+                    <img src="assets/images/logimgl.png" alt="TGH-The Gamer's Heaven" width="250">
+                </a>
+                
+                <ul class="tgh-nav align-right d-lg-table-cell" data-nav-mobile="#nk-nav-mobile">
+                    
+        <li class="tab1">
+           <div class="pp"> <a class="a1" href="store.html">
+                Game Store</a><button id="bo1" href="#tab1" data-toggle="collapse" style="border-radius:2rem;" onclick="passdata()">+</button></div>
+				
+                
+        
+			
+			<div id="tab1" class="tab collapse">
+			<ul >
+                        
+        <li>
+            <a href="store.html#xbox">
+                Xbox Games
+                
+            </a>
+        </li>
+        <li >
+            <a href="store.html#ps">
+                PS Games
+          </li>
+<li>		  
+            </a>
+            <a href="store.html#pc">
+                PC Games
+                
+            </a>
+        </li>
+        <li>
+            <a href="store.html#nin">
+                Nintendo
+                
+            </a>
+        </li>
+        
+                    </ul></div>
+        </li>
+		
+		
+        <li >
+            <div class="pp2">
+			<a href="hardware.html" class="a1">
+                Hardware
+                
+            </a><button id="bo2" href="#tab2" data-toggle="collapse" style="border-radius:3rem;">+</button></div>
+			
+			<div id="tab2" class="tab2 collapse">
+			<ul  >
+                        
+        <li>
+            <a href="#a1">
+                Consoles
+                
+            </a>
+        </li>
+		<li>
+            <a href="#a2">
+                PC Gaming
+                
+            </a>
+        </li>
+        <li >
+            <a href="#a3">
+                Accessories
+                
+            </a>
+                   
+        </li>
+       
+                    </ul></div>
+        
+        
+        <li >
+            <a href="#">
+                News
+                
+            </a>
+        </li>
+        <li >
+            <a href="support.html">
+                Support +
+                
+            </a>
+        </li>
+		</ul>
+                
+            </div>
+        </div>
+    </nav>
+    <!-- END: Navbar -->
+
+</header>
+
+    
+    
+     
+<br>
+    
+
+    <div >
+        
+        
+
+        
+<div class="container">
+
+    <div >
+        <h2 >________________________<span>Checkout Details</span>________________________</h2>
+
+
+               <!-- START: Order Products -->
+        <div class="gap"></div>
+        <h5 >-------------------------------------------------------------------------------<span>Your Order</span>-------------------------------------------------------------------------------</h5>
+        <div class="gap"></div>
+        <div >
+            <table id="t1" >
+                
+                    <tr>
+					<th>S NO.</th>
+                        <th >Product</th>
+                        <th >Price</th>
+                    </tr>
+					
+					<tr>
+					<tbody>
+					
+					
+					</tbody>
+               
+                    
+                
+            </table>
+			<hr>
+			<table >
+                
+                    <tr>
+					<td colspan="2"><h4>Total : </h4></td>
+                        <td ><h4 id="total">Price</h4></td>
+                        
+                    </tr></table>
+        </div>
+        <!-- END: Order Products -->
+       
+<br>
+<hr>
+
+
+        <!-- START: Billing Details -->
+        <div class="gap"></div>
+        <form action="#" onsubmit="validation()" name="false" id="main" >
+            <div class="row">
+                <div class="col-6">
+                    <div class="row">
+                        <div class="col-6">
+                            <label for="fname">First Name <span class="text-main-1">*</span>:</label>
+                            <input type="text" class="form-control" name="fname" id="fname" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="lname">Last Name :</label>
+                            <input type="text" class="form-control" name="lname" id="lname" >
+                        </div>
+                    </div>
+
+                    <div ></div>
+                    <label for="company">Company Name:</label>
+                    <input type="text" class="form-control" name="company" id="company">
+
+                    <div class="gap"></div>
+                    <div class="row ">
+                        <div class="col-6">
+                            <label for="email">Email Address <span class="text-main-1">*</span>:</label>
+                            <input type="email" class="form-control" name="email" id="email" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="phone">Phone <span class="text-main-1">*</span>:</label>
+                            <input type="text" class="form-control " name="phone" id="phone" maxlength=10 required>
+                        </div>
+                    </div>
+
+                    <div class="gap"></div>
+                    <label for="country-sel">Country <span class="text-main-1">*</span>:</label>
+                    <select name="country" class="form-control required" id="country-sel" required>
+                        <option value="">Select Country</option>
+						<option value="">India</option>
+						<option value="">Australia</option>
+						<option value="">Antarctica</option>
+						<option value="">Canada</option>
+						<option value="">England</option>
+						<option value="">Russia</option>
+                    </select>
+                </div>
+                <div class="col-6">
+                    <label for="address">Address <span class="text-main-1">*</span>:</label>
+                    <input type="text" class="form-control required" name="address" id="address" required>
+
+                    
+                    <label for="city">Town / City <span class="text-main-1">*</span>:</label>
+                    <input type="text" class="form-control" name="city" id="city" required>
+
+                    <div class="gap"></div>
+                    <div class="row ">
+                        <div class="col-6">
+                            <label for="state">State<span class="text-main-1">*</span>:</label>
+                            <input type="tel" class="form-control" name="state" id="state" required>
+                        </div>
+                        <div class="col-6">
+                            <label for="zip">Postcode / ZIP <span class="text-main-1">*</span>:</label>
+                            <input type="tel" class="form-control " name="zip" id="zip" required>
+                        </div>
+                    </div>
+
+                    <div class="gap"></div><br>
+                    
+					
+<div class="custom-control custom-checkbox checkbox-lg">
+          <input type="checkbox" class="custom-control-input" id="checkbox-2" checked="">
+          <label class="custom-control-label noselect" for="checkbox-2">Get Digital Code to avoid contact delivery in this Pandemic<button id="cbb" type="button" style="border-radius:50%">?</button></label><div id="cbbd">You'll get game delivered after pandemic</div>
+        </div>
+
+
+					
+					
+					
+                </div>
+            </div>
+        
+        <!-- END: Billing Details -->
+
+        <div class="gap"></div>
+        
+            <div class="gap"></div>
+            <label for="notes">Order Notes:</label>
+            <textarea class="form-control" name="notes" id="notes" placeholder="Manage how your order should be delivered eg; gift-wrap,leave order at doorstep,etc." rows="2"></textarea>
+        
+
+ 
+
+        <div class="gap"></div>
+        
+   
+   </div>
+
+ <button type="submit" class="btn btn-primary btn-lg" value=0 id="mainbtn">Proceed to Payment</button></form>
+
+
+<div class='modal' id="abcd" data-backdrop="static" data-keyboard="false">
+     <div class="modal-dialog">
+	      <div class="modal-content">
+		          
+				  
+				  <div class="modal-header" id="heading">Choose Payment Method</div>
+			      <div class="modal-body" id="content">
+				  <button class="button btn btn-warning" id="button1" data-toggle="modal" data-target="#b1" data-dismiss="modal">Credit/Debit</button>
+	<button class="button btn btn-warning" id="button2" data-toggle="modal" data-target="#b1" data-dismiss="modal">Net Banking</button>
+	<button class="button btn btn-warning" id="button3" data-toggle="modal" data-target="#b1" data-dismiss="modal">Wallet</button>
+	<button class="button btn btn-warning" id="button4" data-toggle="modal" data-target="#b1" data-dismiss="modal">UPI</button>
+				  
+				  
+				  
+				  </div>
+				  <div class="modal-footer"> <button type="submit" class="btn btn-danger" data-dismiss="modal">Cancel Order</button> </div>
+				  
+           </div>
+
+     </div>
+</div>
+
+
+
+
+<!--new modal test---->
+
+<div class='modal' id="b1" data-backdrop="static" data-keyboard="false">
+     <div class="modal-dialog">
+	      <div class="modal-content">
+		          
+				  
+				  <div class="modal-header" id="heading">Enter Payment Details</div>
+			      <div class="modal-body" id="content">
+				  
+				  
+				  <form action="support.html" onsubmit="alt()">
+				  <label for='cn'>Card Number</label>
+				  <input type="number" id='cn' maxlength=16 required>
+				  
+				  <br>
+				  <label for='ed'>Expiry Date</label>
+				  <input type="month" min="2021-05" id='ed' required>
+				  
+				  <label for='chn'>Card Holder Name</label>
+				  <input type="text" id='chn' required>
+				  
+				  <label for='cvv'>CVV</label>
+				  <input type="text" id='cvv' maxlength="3" placeholder="777" required>
+				  
+				  
+				  
+				  
+				  </div>
+				  <div class="modal-footer"> <button class="btn btn-danger" data-dismiss="modal" id="backbtn">Back</button><button type="submit" class="btn btn-primary" id="op" >Place Order</button> </div></form>
+				  
+           </div>
+
+     </div>
+</div>
+
+</div>
+
+
+<div class="gap"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="social" >
+  <br><p align="center" id="disclaimer"> © 2021 G32/Group 10. This project is exclusively made for FA and not to be used by others without the permission of Group 10 members from G32...<br>
+  This project is only a prototype so don't put high expectations ...Thank You!
+  </p><div class="gap"></div>
+     <nav class="navbar navbar-expand" >
+     <ul class="navbar-nav navbar-center" >
+	     <li class="nav-item">
+		     <a class="nav-link" href="#">Privacy Policy </a></li>
+         <li class="nav-item">
+		     <a class="nav-link" href="#">Forums</a></li>
+		 <li class="nav-item">
+		     <a class="nav-link" href="#">Refund</a></li>	 
+ 	     <li class="nav-item">
+		     <a class="nav-link" href="index.html#d3">Members</a></li>
+         
+	</ul>
+
+</nav>
+
+
+</div>	
+	
+	
+	
+
+
+
+
+    <div >    
+           
+<footer >
+
+    <div class="india">
+        
+            <h5>
+                <a target="_blank" href="index.html" >AWD Project Made BY GROUP 10</a>
+            </h5>
+            
+    </div>
+</footer>
+
+        
+    </div>
+
+    
+
+
+    
+
+    
+ 
+
+    
+
+
+
+<!-- Bootstrap -->
+<script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+
+
+
+    
+</body>
+</html>

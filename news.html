@@ -1,0 +1,621 @@
+
+ 
+ <!DOCTYPE html>
+
+    
+ <html lang="en">
+ <head>
+     <meta charset="utf-8">
+     <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
+ 
+     <title>The Gamer's Heaven</title>
+ 
+ 
+     <link rel="icon" type="image/png" href="assets/images/Layer 1.png">
+ 
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+ 
+     <!-- Google Fonts -->
+     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7cOpen+Sans:400,700" rel="stylesheet" type="text/css">
+ 
+     <!-- Bootstrap -->
+     <link rel="stylesheet" href="assets/vendor/bootstrap/dist/css/bootstrap.min.css">
+ 
+     
+     <link rel="stylesheet" href="assets/tghcss.css">
+  
+ 
+     <!-- jQuery -->
+     <script src="assets/vendor/jquery/dist/jquery.min.js"></script>
+     
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     
+     
+     <script src="assets/tg.js"></script>
+ 
+ <style>
+  
+  @import url('http://fonts.cdnfonts.com/css/facon');
+ 
+ .post-img {
+     position: relative;
+     display: block;
+     overflow: hidden;
+     
+ }
+ 
+ .post-img img {
+     width: 65%;
+     height: 65%;
+ 
+ }
+ .gap{display: block;
+     height: 15px;}
+ 
+ 
+ h3 a:hover{
+     color: blue;
+ }
+ 
+    
+    
+ .post-text{
+         font-size: 20px;
+     }
+     
+ .post-text a:hover{color:aqua;}
+   
+     
+ 
+ 
+            
+             
+             .pagination {
+                
+                 display: flex;
+     
+                     flex-wrap: wrap;
+                 font-size: 1.7rem;
+                 font-weight: 600;
+                 color: #fff;
+             }
+             .pagination .pagination-prev,
+             .pagination .pagination-next {
+                 position: relative;
+                 color: inherit;
+                 text-decoration: none;
+                 vertical-align: middle;
+                 
+             }
+             .pagination .pagination-prev {
+                 padding-right: 14px;
+                 text-align: left;
+             }
+             
+             .pagination .pagination-next {
+                 padding-left: 14px;
+                 text-align: right;
+             }
+             .pagination a {
+                 color: inherit;
+                 text-decoration: none;
+                 
+             }
+             
+             .pagination a:hover {
+                 color: #dd163b;
+             }
+             .pagination nav {
+                
+                 display: flex;
+                 
+                     flex-wrap: wrap;
+                 text-align: center;
+             }
+             
+             .pagination nav > * {
+                 padding-right: 15px;
+                 padding-left: 15px;
+             }
+             
+             .pagination nav > *.pagination-current {
+                 min-width: 42px;
+                 height: 42px;
+                 padding: 3px;
+                 line-height: 28px;
+                 color: #dd163b;
+                 border: 4px solid;
+                 border-radius: 21px;
+             }
+             .pagination.pagination-center {
+                 
+                         justify-content: center;
+             }
+             
+             
+ 
+ label{color:white;}
+ 
+ 
+ .cu{height:330px;}
+ 
+ .links{color:white;
+ font-size:20px;}
+ 
+ .links:hover{color:red;}
+ 
+ #help{color:white;font-size:15px;}
+ 
+ 
+ .links2{font-size:20px;}
+ 
+ 
+ .links2:hover{color:red;}
+                    
+ </style>
+ 
+ <script>
+ 
+ var status=0;
+ 
+ function validation(){
+ var mail=document.getElementById("em").value;
+   var regxem=/^([a-zA-Z0-9\.]+)@([a-zA-Z0-9]+).([a-z]{2,5}).([a-z]{2,5})$/ ;
+   if(regxem.test(mail))
+   {status=1;}
+   else{status=0;
+     alert("Enter Valid Email ");
+     }
+     
+     $("#mai").click(function(e){if(status==1){
+   $('#myModal').modal('show');
+   e.preventDefault();
+   }
+   else{return false;}
+ });
+ 
+ }
+ </script>
+ 
+ <body>
+     
+         
+ 
+     <header >
+     
+         
+     
+         <nav class="tgh-navbar ">
+             <div class="container">
+                 <div class="tgh-nav-table">
+                     
+                     <a href="index.html" class="tgh-nav-logo" title="The Gamer's Heaven">
+                         <img src="assets/images/logimgl.png" alt="TGH-The Gamer's Heaven" width="250">
+                     </a>
+                     
+                     <ul class="tgh-nav align-right  d-lg-table-cell" >
+                         
+             <li >
+                <div class="pp"> <a class="a1" href="store.html">
+                     Game Store</a><button id="bo1" href="#tab1" data-toggle="collapse" style="border-radius:3rem;">+</button></div>
+                 
+             
+                     
+             
+                 
+                 <div id="tab1" class="tab collapse">
+                 <ul >
+                             
+             <li>
+                 <a href="store.html#xbox" >
+                     Xbox Games
+                     
+                 </a>
+             </li>
+             <li >
+                 <a href="store.html#ps" >
+                     PS Games</a>
+               </li>
+     <li>		  
+                 
+                 <a href="store.html#pc">
+                     PC Games
+                     
+                 </a>
+             </li>
+             <li>
+                 <a href="store.html#nin">
+                     Nintendo
+                     
+                 </a>
+             </li>
+             
+                         </ul></div>
+             </li>
+             
+             
+             <li >
+                 <div class="pp2">
+                 <a href="hardware.html" class="a1">
+                     Hardware
+                     
+                 </a><button id="bo2" href="#tab2" data-toggle="collapse" style="border-radius:3rem;">+</button></div>
+                 
+                 <div id="tab2" class="tab2 collapse">
+                 <ul  >
+                             
+             <li>
+                 <a href="hardware.html#a1">
+                     Consoles
+                     
+                 </a>
+             </li>
+             <li>
+                 <a href="hardware.html#a2">
+                     PC Gaming
+                     
+                 </a>
+             </li>
+             <li >
+                 <a href="hardware.html#a3">
+                     Accessories
+                     
+                 </a>
+                        
+             </li>
+            
+                         </ul></div>
+             
+             
+             <li >
+                 <a href="#">
+                     News
+                     
+                 </a>
+             </li>
+             <li >
+                 <a href="#cu">
+                     Support +
+                     
+                 </a>
+             </li>
+             
+            
+                
+         </ul>        
+                         
+                         
+                     
+                 </div>
+             </div>
+         </nav>
+                     
+     
+     </header>
+     
+         
+         
+      
+     
+   
+     
+ 
+   
+         
+             <!-- START: Breadcrumbs -->
+ <div class="gap2"></div>
+ 
+ <div class="gap"></div>
+ <!-- END: Breadcrumbs -->
+ 
+         
+ 
+         
+ <div class="container">
+ <h1>NEWS</h1>
+ 
+ <br>
+     <!-- START: Posts FullWidth -->
+     <div >
+         
+         <!-- START: Post -->
+         
+             <a href="news-article.html" class="post-img">
+                 <img src="assets/images/pacman.jpg" alt="pacman">
+                 
+             </a>
+             <div class="gap"></div>
+             
+                 
+                     <h3 ><a href="news-article.html">Race under the cover of darkness in new course Ninja Hideaway</a></h3>
+                     
+                     <div class="post-text">
+         <p>Do your best to sneak into first place during the Ninja Tour—the latest limited-time event in the Mario Kart Tour game, happening now! Maneuver your way through the moon-lit streets of the brand-new Ninja Hideaway course, stealthily boobytrap the course.... <a href="news-article.html" class="ul" >Read more...</a></p>
+                     </div>
+                 
+               
+                     
+                     <div class="gap"></div>
+                     
+                
+             
+         </div>
+         <br>
+         <!-- END: Post -->
+         
+         <!-- START: Post -->
+         <div >
+             <a href="news-article.html" class="post-img">
+                 <img src="assets/images/marioparty.jpg" alt="marioparty">
+                
+             </a>
+            <div class="gap"></div>
+             
+                 
+                     <h3><a href="news-article.html">Free update for Super Mario Party! Online play comes to the board game mode</a></h3>
+                     
+                     <div class="post-text">
+                         <p>The Super Mario Party™ game is getting a little more online-y*! After installing the free game update, online play** will be added to the following modes. So the major advantage you'll ....<a href="news-article.html" class="ul" >Read more...</a></p>
+                     </div>
+                
+                 
+             
+         </div>
+         
+         <br><br>
+         <!-- END: Post -->
+         
+         <!-- START: Post -->
+         <div >
+             <a href="news-article.html" class="post-img">
+                 <img src="assets/images/miitopia.jpg" alt="miitopia">
+                
+             </a>
+             <div class="gap"></div>
+             
+                
+                     <h3 ><a href="news-article.html">Get a head start on making your Mii characters! Try Miitopia with the free demo.</a></h3>
+                     
+                     <div class="post-text">
+                         <p>In the Miitopia™ game, you can create Mii™ characters and then cast them as important characters in the game. Which means that you can make a super team of your younger cousins and Aunt Flora. Or maybe mix in some friends...<a href="news-article.html" class="ul" >Read more...</a></p>
+                     </div>
+                 
+                
+             
+         </div><br><br>
+         <!-- END: Post -->
+         
+         <!-- START: Post -->
+         <div >
+             <a href="news-article.html" class="post-img">
+                 <img src="assets/images/rainbowsix.jpg" alt="rainbowsix">
+                
+             </a>
+             <div class="gap"></div>
+             
+                     <h3 ><a href="news-article.html">Rainbow Six Siege's new patch is adding a micro-app to track your stats</a></h3>
+                     
+                     <div class="post-text">
+                         <p>The Y6S1.3 patch for multiplayer game Rainbow Six Siege has arrived, along with its patch notes. In addition to some of the operator adjustments we've seen bouncing around the PTS over the past month or so, there's mention of a new 'micro-app' feature...<a href="news-article.html" class="ul" >Read more...</a></p>
+                     </div>
+                
+                 
+             
+         </div><br><br>
+         <!-- END: Post -->
+         
+         <!-- START: Post -->
+         <div >
+             <a href="news-article.html" class="post-img">
+                 <img src="assets/images/spiderman.jpg" alt="spiderman">
+                
+             </a>
+             <div class="gap"></div>
+             
+                     <h3><a href="news-article.html">Marvel's Spider-Man Remastered</a></h3>
+                     
+                     <div class="post-text">
+                         <p>Remastered and enhanced for PS5 console – experience the complete award-winning adventure with updated visuals and immersive new features which will leave your mouth wide open because...<a href="news-article.html" class="ul" >Read more...</a></p>
+                     </div>
+                 
+                 
+             
+         </div><br><br>
+         <!-- END: Post -->
+         
+         <!-- START: Post -->
+         <div >
+             <a href="news-article.html" class="post-img">
+                 <img src="assets/images/Radeon.jpg" alt="Radeon">
+                
+             </a>
+             <div class="gap"></div>
+            
+                     <h3 ><a href="news-article.html">New AMD drivers add support for Hitman 3 and Quake 2 RTX</a></h3>
+                     <div class="gap"></div>
+                     <div class="post-text">
+                         <p>AMD's first Adrenalin driver update of 2021, Edition 21.1.1 is here, with optimisation for two recent titles, plus general fixes for other games. If you've been playing the new Hitman 3 on the best graphics cards from team red then it's an update you'll want to take advantage...<a href="news-article.html" class="ul" >Read more...</a></p>
+                     </div>
+                 
+         </div>
+         <!-- END: Post -->
+         
+ 
+         <!-- START: Pagination -->
+         <div class="pagination pagination-center">
+             <a href="#" class="pagination-prev">
+                 <span class="ion-ios-arrow-back"></span>
+             </a>
+             <nav>
+                 <a class="pagination-current" href="#">1</a>
+                 <a href="#">2</a>
+                 <a href="#">3</a>
+                 <a href="#">4</a>
+                 <span>...</span>
+                 <a href="#">14</a>
+             </nav>
+             <a href="#" class="pagination-next">
+                 <span class="ion-ios-arrow-forward"></span>
+             </a>
+         </div>
+         <!-- END: Pagination -->
+     </div>
+     <!-- END: Posts FullWidth -->
+ </div>
+ 
+ <div class="gap2"></div>
+ 
+ 
+         
+  
+             <!-- START: Footer -->
+             <br>
+  <div class="cu flex-view">
+         
+         <div class="row container " id="cu">
+             <div class="col-6 ">
+                 
+                     <h3 class="nav-link">Support ++</h3>
+                     
+                        <form action="#cu" onsubmit="validation()" >
+ 
+ <div class='form-group'>
+     <label ><h5 >E-mail</h5></label>
+     <input type="email" id="em" class='form-control' placeholder="We will contact back through this E-mail" >
+ 
+ </div>
+ 
+ <div class='form-group'>
+     <label ><h5>Message</h5></label>
+     <textarea class='form-control' required></textarea><br>
+     <button type="submit" id="mai" class="btn-tgh btn-info btn-lg" >Submit</button> </form>
+ 
+ </div>
+ <div class="modal-container">  
+   
+     <!-- Trigger the modal with a button -->  
+      
+     
+     <!-- Modal -->  
+     <div class="modal " id="myModal" >  
+       <div class="modal-dialog">  
+           
+         
+         <!-- Modal content-->  
+         <div class="modal-content">  
+           <div class="modal-header">  
+             <h4 class="modal-title">Message Received</h4>  
+           </div>  
+           <div class="modal-body">  
+             <p>Someone Will Be In Contact Shortly. 
+                 Thank You For Interacting With Us</p>  
+           </div>  
+           <div class="modal-footer">  
+             <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">Close</button>  
+           </div>  
+         </div>  
+           
+       </div>  
+     </div>  
+ 
+ 
+                         
+                     
+                 
+             </div>
+             
+                             
+                       
+                
+             </div>
+             
+             
+             <div class="col-1"></div>
+             
+             <div class="col-5"><h3 class="nav-link">Contact Us</h3><br>
+             <div class="row">
+             <div class="col-7">
+             <a href="#" class="links">www.tgh.co.in/help</a><br><br>
+             
+             <a href="#" class="links">discord.com/TGH</a><br><br>
+             
+             <a href="#" class="links">twitter.com/TGH</a><br><br>
+             
+                 <div ><a id="help" >Need more help ?</a>&nbsp;<a href="support.html"><button type="button" class="btn-tgh btn-danger btn-sm" style="width:auto">Click here</button></a>
+             </div>
+             
+             </div>
+             
+             
+             <div class="col-5">
+             
+             <a href="#" class="links">reddit.com/TGH</a><br><br>
+             
+             <a href="#" class="links2">youtube.com/TGH</a><br><br>
+             
+             </div>
+             
+             
+             </div>
+             </div>
+             
+             
+             
+             
+             
+             
+             
+             </div>
+         
+         
+     </div>
+  
+ 
+ 
+ 
+ 
+ 
+ 
+  
+ <footer >
+ 
+     <div class="india">
+         
+             <h5>
+                 <a target="_blank" href="index.html" >AWD Project Made BY GROUP 10</a>
+             </h5>
+             
+     </div>
+ </footer>
+ 
+    
+ 
+  
+ 
+ 
+ 
+     
+ 
+     
+   
+     
+ 
+ 
+ 
+     
+ 
+     
+ <!-- START: Scripts -->
+ 
+ 
+ <!-- Bootstrap -->
+ <script src="assets/vendor/bootstrap/dist/js/bootstrap.min.js"></script>
+ 
+ 
+ 
+ 
+     
+ </body>
+ </html>
+ 

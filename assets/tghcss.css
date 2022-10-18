@@ -1,0 +1,329 @@
+body {
+    background: linear-gradient(to top,#6b18f0 0%,#ffffff 50%,#cc00cc 100%);
+}
+
+
+a {
+    color: #37324d;
+}
+
+@import url('http://fonts.cdnfonts.com/css/facon');
+
+
+a:hover {
+    color: #ff66ff;
+    text-decoration:none;
+}
+
+
+@font-face {
+  font-family: Avengero Disassembled;
+  src: url('Font/AvengeroDisassembledRegular-nRvd4.ttf');
+}
+
+@font-face {
+  font-family: American Kestrel Laser;
+  src: url('Font/AmericanKestrelLaser-r62y.otf');
+}
+
+
+
+.head:hover {
+    color: #ff66ff;
+}
+
+footer a:hover{color:blue;}
+
+.gap
+ {
+    display: block;
+    height: 18px;
+}
+
+.gap2
+ {
+    display: block;
+    height: 21px;
+}
+
+
+.flex-view{display:flex;}
+
+#cart_value{
+  font-family: facon;
+  font-size:20px;
+  
+}
+
+
+.btn{height:60px;
+border:0;}
+
+button:focus{
+outline:none;}
+
+.xb:hover{color:#32a852}
+.pc:hover{color:#0d0d0d}
+.ps:hover{color:#0e3a78}
+.nin:hover{color:#db2121}
+
+
+
+#checkout-btn{
+  font-family: Avengero Disassembled;
+  font-size:20px;
+  position: fixed;
+  bottom:55px;
+  right:0px;
+  z-index:1;
+}
+
+#cart-btn{
+  position: fixed;
+  bottom:55px;
+  right:147px;
+  z-index: 1;
+}
+
+#d3 {font-family: American Kestrel Laser;
+  font-size:37px;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+}
+
+#group{
+  font-family: facon;
+  font-size:30px;
+}
+
+.align-right{text-align:right;border:0;}
+	 
+.tab{
+height:120px;
+width:190px;
+border: 2px solid red;
+background-color:black;
+}
+
+
+.title-xb > a:hover {
+    color: #53b015;
+}
+
+.title-pc > a:hover {
+    color: #000000;
+}
+
+.nintendo-title > a:hover {
+    color: #ff1a1a;
+}
+
+.sonyps-title > a:hover {
+    color: #366bd6;
+}
+
+
+
+
+.homimg img {
+    width: 100%;
+    height: auto;
+}
+
+
+.tgh-navbar {
+    padding: 10px 0;
+    font-family: "facon";
+    font-size: 1.2rem;
+    color: #fff;
+background-color: rgba(45, 17, 50, 1);
+text-align: center;
+}
+
+
+
+.tgh-navbar a {
+    color:white;
+    text-decoration:none;
+}
+
+
+
+
+
+.tgh-navbar .tgh-nav-table > * {
+    display: table-cell;
+}
+
+
+
+.tgh-navbar .tgh-nav > li > a {
+    padding: 6px 21px;
+}
+
+
+
+
+.tgh-navbar .tgh-nav-table > .tgh-nav-logo {
+    width:5%;
+}
+
+
+.tgh-navbar .tgh-nav li > a:hover {
+    color: #cc66ff;
+}
+
+.tab2{
+height:95px;
+width:190px;
+border: 2px solid red;
+background-color:black;
+}
+
+.pp{display: inline;}
+.pp2{display: inline;
+padding: 0px 30px;}
+
+
+
+li{padding:0;}
+
+.a1:hover{color:#cc66ff;}
+
+#bo1:hover{background-color:#3aeb34;}
+#bo2:hover{background-color:#3aeb34;}
+
+
+#pc-img{border: 1px solid black;}
+
+.gameimg{height:335px;
+width:255px;}
+
+
+.conimg{height:230px;
+width:350px;}
+
+.pgimg{height:197px;
+width:230px;
+border: 1px solid black;}
+
+
+.cu{background-image:url(images/vc2.jpg); 
+height:260px;width:100%;}
+
+.form-control{background-color:#fff !important;
+color:black !important;}
+
+.social{display:block;
+height:140px;
+background-color:black;
+opacity:0.5;}
+
+#disclaimer{color:#fff;}
+
+.nav-link{color:#fff;}
+
+.navbar-nav.navbar-center {
+            position: absolute;
+            left: 50%;
+            transform: translatex(-50%);
+          
+        }
+
+.india{background-image:linear-gradient(Orange,White,Green);
+height:60px;
+text-align:center;
+padding: 20px 50px;}
+
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+h1,h2,h3,h4,h5{font-family: "Montserrat", sans-serif;
+   font-weight:600;
+   text-transform: uppercase;}
+
+h5{
+   font-size:1rem;}
+
+h4{
+	font-size:18px;
+    }
+
+
+
+
+
+
+
+.spanning{transform: translateY(-7px);}
+
+
+
+
+
+
+
+.text-main-1 {
+    color: #6b0546 !important;
+}
+
+
+.tgh-navbar .tgh-nav > li {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+
+.btn1{
+    padding: 4px 6px;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    line-height:20px !important;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase;
+    border: 0;
+    border-radius:0.2rem;
+    color:#fff;
+    background-color:black;
+}
+
+
+.common-btn:hover {
+color:#000d1a;
+    background-color: #e6f2ff;
+    
+}
+
+.xb-btn:hover {
+color:#fff;
+    background-color: #24b345;
+    border-color: #a5102c;
+}
+
+.nintendo-btn:hover {
+color:#fff;
+    background-color: #ff0000;
+    border-color: #a5102c;
+}
+
+.ps-btn:hover {
+color:#fff;
+    background-color: #1746a3;
+    border-color: #a5102c;
+}
+
+.grpbg{background-image:url(images/lol2.jpg);background-size:350px 500px;background-repeat:no-repeat;
+padding:0px 60px;}
+
+.noselect{-webkit-user-select:none;}
+
+h3,h5,h2,h1,.botton{-webkit-user-select:none;}
